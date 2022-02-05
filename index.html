@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <img src="https://3.bp.blogspot.com/-_zxWvZJ06po/UTZaXyfHAHI/AAAAAAAAAns/3xRTkr1R29Y/s1600/bloodm10.gif" width = "1205" height ="100" align="center" />
+    
+    <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" width = "150" height ="100" align="left" />
+    <img src="https://www.oracle.com/a/ocom/img/rh03-lad-one-logo.png" width = "290" height ="200" align="right" />
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+      </head>
+       <body>
+    
+
+  <!--***<body onload="draw()">   ****-->
+  
+   
+     <h1 style="text-align:center" class="titulo">Ahorcado</h1>
+
+     <div class="cuerpo"> 
+              <div style="text-align:center; margin: 50px 290px;">
+                
+
+                  <a href="#popup1" onclick="draw()"><button  class="btn" id="iniciar-juego">JUGAR!!!</button></a>
+                <!--**  <button onclick="palabrarandom()" class="btn" >boton multiuso</button> ****-->
+              </div>
+
+
+
+              <div style="text-align:center">
+                <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
+                
+              </div>
+
+
+              <div style="text-align:center">
+                
+                <button onclick="dibujarGuiones()" class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
+              </div>
+
+ </div>
+
+
+
+    <div style="text-align:center;">
+      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
+    </div>
+
+
+
+
+
+    <div id="popup1" class="overlay"> <!--***   ****-->
+      <div id="popupBody">
+          <h2 align="center">text</h2>  <!--***  ****-->
+          <a id="cerrar" href="#">&times;</a>
+          <button onclick="dibujarGuiones()" class="btn" id="btnVisible" >INICIAR JUEGO</button>
+
+                     
+
+
+      <div class ="espaciotablero">
+
+            <canvas id="tablero" width="1200" height="800">
+            </canvas>
+
+
+      </div>
+
+  
+
+      </div>
+    </div>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+    
+    <script type="text/javascript" src="palabrarandom.js"></script>
+    <script type="text/javascript" src="arraydeletras.js"></script>
+    <script type="text/javascript" src="canvas.js"></script>
+    <script type="text/javascript" src="ahorcado.js"></script>
+  </body>
+</html>
