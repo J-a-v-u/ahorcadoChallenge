@@ -1,8 +1,49 @@
 body {
   
-  background-color: rgb(44, 31, 31);
+  background-color: rgb(0, 0, 0);
  
 }
+section{
+
+ background: url("images/atardecerhorca.png");
+  background-repeat: no-repeat;
+ background-size: contain;
+ background-position: top;
+
+}
+
+
+.encabezado {
+  
+  color: rgb(250, 1, 1);
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  z-index: 2;
+}
+.marco{
+  display: block;
+ margin-top: 0px;
+ 
+  text-align: center;
+  width: 300px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 130, 28, 0.363);
+  border-radius: 1em;
+ 
+  border: 6px solid #df1d03;
+  z-index: 2;
+}
+
+.gifsangre{
+  margin-top: 3px;
+z-index: -1;
+
+}
+
+
 
 /*****************INICIO ANIMACION DE GOTEO*****************/  
 .sangrado{
@@ -122,21 +163,23 @@ body {
  
 }
 
-
-
-.btnInvisible {
-  display: block;
+#btnvisible {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  width: 1000;
   margin-left: auto;
   margin-right: auto;
-  width: 100px; 
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: blue;
-  padding: 10px;
+  transition: opacity 500ms;
+  opacity: 1;
+}
+
+.btnInvisible {
   margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 0.5em;
+  text-align: center;
+  width: 1000;
+  margin-left: auto;
+  margin-right: auto;
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
@@ -213,17 +256,17 @@ body {
   margin-right: auto; 
   border-radius: 15px;
   box-shadow: 0 0 5px #CCC;
-  background: rgb(41, 32, 58);
+  background: rgba(63, 14, 1, 0.85);
  
  
  }
 #cerrar{
   position: absolute;
   left: 1270px;
-  top: 20px;
+  top: 0px;
   margin-right: auto; 
   transition: all 200ms;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   text-decoration: none;
   color: rgb(255, 0, 0);
@@ -265,16 +308,19 @@ margin-right: 50px;
 .buttons2 {
   margin-top: 50px;
   text-align: center;
-  width: 1000;
+  width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
 .buttons3 {
   margin-top: 10px;
   text-align: center;
-  width: 1000;
+  width: 200px;
+  height: 70px;
   margin-left: auto;
   margin-right: auto;
+  background-color: rgba(247, 229, 229, 0.5);
+
 }
 
 .blob-btn {
@@ -284,7 +330,7 @@ margin-right: 50px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: rgba(253, 101, 101);
+  color: rgb(0, 0, 0);
   font-size: 16px;
   font-weight: bold;
   background-color: transparent;
@@ -293,6 +339,11 @@ margin-right: 50px;
   transition: color 0.5s;
   cursor: pointer;
 }
+
+
+
+
+
 .blob-btn:before {
   content: "";
   z-index: 1;
