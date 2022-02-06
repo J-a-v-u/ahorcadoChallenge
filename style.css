@@ -4,7 +4,91 @@ body {
  
 }
 
-
+/*****************INICIO ANIMACION DE GOTEO*****************/  
+.sangrado{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  }
+  
+  /**************GOTAS CHICAS**************/
+  .sangrado div{
+  position:absolute;
+  display: block;
+  
+  }
+  
+  .sangrado div:nth-child(1){
+      left: 7%;
+      animation: animate 1.1s linear infinite;
+      animation-delay: -4s;
+  }
+  .sangrado div:nth-child(2){
+      left: 24%;
+      animation: animate 1.3s linear infinite;
+      animation-delay: -2s;
+  }
+  .sangrado div:nth-child(3){
+      left: 31%;
+      animation: animate 1.8s linear infinite;
+      animation-delay: -7s;
+  }
+  .sangrado div:nth-child(4){
+      left: 47%;
+      animation: animate 1.3s linear infinite;
+      animation-delay: -3s;
+  }
+  .sangrado div:nth-child(5){
+      left: 59%;
+      animation: animate 1.1s linear infinite;
+      animation-delay: -6s;
+  }
+  .sangrado div:nth-child(6){
+      left: 70%;
+      animation: animate 1.1s linear infinite;
+      animation-delay: -4s;
+  }
+  .sangrado div:nth-child(7){
+      left: 90%;
+      animation: animate 1.1s linear infinite;
+      animation-delay: -4s;
+  }
+  /**************GOTAS GRANDES**************/
+  
+  .sangrado2 div{
+      position:absolute;
+      display: block;
+      
+      }
+      .sangrado2 div:nth-child(1){
+          left: 15%;
+          animation: animate 1.7s linear infinite;
+          animation-delay: -6s;
+      }
+      .sangrado2 div:nth-child(2){
+          left: 48%;
+          animation: animate 1.5s linear infinite;
+          animation-delay: -2s;
+      }
+      .sangrado2 div:nth-child(3){
+          left: 91%;
+          animation: animate 1.8s linear infinite;
+          animation-delay: -7s;
+      }
+  
+  @keyframes animate {
+      0%{
+          top: -10%;
+      }
+      100%{
+          top:110%;
+      }    
+  }
+  
+/*****************FIN ANIMACION DE GOTEO*****************/  
 
 
 .titulo {
@@ -30,11 +114,12 @@ body {
   border: 0;
   color: white;
   font-weight: bold;
-  background-color: blue;
+  background-color: rgba(204, 61, 42, 0.3);
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 0.5em;
+  border-radius: 1em;
+ 
 }
 
 
@@ -86,12 +171,11 @@ body {
   position: fixed;
   top: 0px;
   left: 150px;
-
-
   background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+  z-index: 15;
 }
 
 .visible{
@@ -121,6 +205,7 @@ body {
 
 #popupBody{
   display: block;
+  position: absolute;
   top: 0px;
   height: 900px;
   width: 1300px;
@@ -154,3 +239,174 @@ margin-right: 50px;
 }
 
 /*******************************/
+
+
+
+
+
+/**************boton blob**************/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 1em;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.buttons2 {
+  margin-top: 50px;
+  text-align: center;
+  width: 1000;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buttons3 {
+  margin-top: 10px;
+  text-align: center;
+  width: 1000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blob-btn {
+  z-index: 1;
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(253, 101, 101);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #ff1e01;
+}
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 9px;
+  top: 9px;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #222;
+  transition: all 0.3s 0.2s;
+}
+.blob-btn:hover {
+  color: rgb(252, 182, 182);
+}
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+}
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+.blob-btn__blob {
+  position: absolute;
+  top: 6px;
+  width: 25%;
+  height: 100%;
+  background: rgb(151, 31, 31);
+  border-radius: 100%;
+  transform: translate3d(0, -150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+
+@supports (filter: url('#goo')) {
+ 
+}
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+@supports (filter: url('#goo')) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
