@@ -1,4 +1,5 @@
 function draw() {
+    console.log("largo array "+ numPalabras);
     var canvas = document.getElementById("tablero");
     if (canvas.getContext) {
       var ctx = canvas.getContext("2d");
@@ -56,7 +57,7 @@ function draw() {
     
       ctx.font = '48px Times New Roman';
       ctx.fillStyle = 'red';
-      ctx.fillText('Juego del ahorcado', 550, 120);
+      //ctx.fillText('Juego del ahorcado', 550, 120);
    
 
 
@@ -219,6 +220,18 @@ function reload() {
 
 
 
+function validar(word){
+
+    var patronletras = /^[a-z]+/;
+    var letraValida = Boolean();
+    letraValida = patronletras.test(word);
+        if(letraValida){
+            return patronletras.test(word);
+            }
+        else{
+            alert("Recuerda que debes ingresar sólo letras minúsculas, sin acentos!!!");
+        }
+}
 
 
 
@@ -236,109 +249,119 @@ function escucharTeclado() {
 
 
     window.addEventListener("keyup", function (event) {
-        if(event){
-        var letra = event.key;
-        letraIngresadaArray.push(letra); 
+        if(event){ 
+        var letra = event.key;        
+        var letraValida = Boolean();
+        letraValida = validar(letra);
+        console.log("validacion " + letraValida)
+                       
+                if(letraValida){
+                    letraIngresadaArray.push(letra);
+                    var intentos = letrasErradas.length
+                    console.log(letra);  
+                    console.log(letraIngresadaArray);  
+                
+                    var sum=0;
+                        if(intentos<6){
 
-        var intentos = letrasErradas.length
-        console.log(letra);  
-        console.log(letraIngresadaArray);  
-       
-        var sum=0;
-            if(intentos<6){
+                                            function multifuncion() {
 
-                                function multifuncion() {
+                                                    for (var i = 0; i < letrasSecretas.length; i++) {
+                                                                    
+                                                                        if(letrasSecretas[i]==letra){
+                                                                            n=i;
+                                                                            sum=sum+1;
+                                                                            console.log(n)
+                                                                                    function insertLetraGuiones() {      //cambia letra acertada por guion/es
+                                    
+                                                                                    //  var letra = event.key;
+                                                                                        console.log(letra);
+                                                                                            guiones[n]=letra;
+                                                                                            var letrasXguiones;
+                                                                                            console.log(guiones);
+                                                                                            letrasXguiones = guiones.join('  ');
+                                                                                            letrasCorrectas.push(letra);
+                                                                                            console.log(letrasXguiones);
+                                                                                            escribirEnCanvas(letrasXguiones);
+                                                                                            console.log(letrasCorrectas);
+                                                                                            if(letrasSecretas.length==letrasCorrectas.length){preguntarSeguir("GANASTE!!!")}
+                                                                                            else{}
+                                                                                    }
 
-                                        for (var i = 0; i < letrasSecretas.length; i++) {
-                                                        
-                                                            if(letrasSecretas[i]==letra){
-                                                                n=i;
-                                                                sum=sum+1;
-                                                                console.log(n)
-                                                                        function insertLetraGuiones() {      //cambia letra acertada por guion/es
-                        
-                                                                        //  var letra = event.key;
-                                                                            console.log(letra);
-                                                                                guiones[n]=letra;
-                                                                                var letrasXguiones;
-                                                                                console.log(guiones);
-                                                                                letrasXguiones = guiones.join('  ');
-                                                                                letrasCorrectas.push(letra);
-                                                                                console.log(letrasXguiones);
-                                                                                escribirEnCanvas(letrasXguiones);
-                                                                                console.log(letrasCorrectas);
-                                                                                if(letrasSecretas.length==letrasCorrectas.length){preguntarSeguir("GANASTE!!!")}
-                                                                                else{}
+                                                                            insertLetraGuiones();
+
                                                                         }
 
-                                                                insertLetraGuiones();
+                                                                        else {
+                                                                            /*
+                                                                            var mostrarLetrasErroneas;
+                                                                            
+                                                                            letrasErradas.push(letra);
+                                                                            mostrarLetrasErroneas = letrasErradas.join(' ');
+                                                                            escribirLetraErrada(mostrarLetrasErroneas)
+                                                                            //alert("no esta esa letra en la palabra!")
+                                                                            dibujarParte(letrasErradas.length)   //poner aqui el codigo para mostrar partes de la persona
+                                                                            console.log("numero de intentos "+intentos);
+                                                                        */
+                                                                        }
+                                                    }
+                                            }
+                                    multifuncion();
+                                                
+                                            function comprobarLetra()  {
+                                            if (sum>0) {return true} else {return false}
+                                            }
 
-                                                            }
+                                    // console.log(comprobarLetra());  
+                                    //comrpobaciones varias
 
-                                                            else {
-                                                                /*
-                                                                var mostrarLetrasErroneas;
-                                                                
-                                                                letrasErradas.push(letra);
-                                                                mostrarLetrasErroneas = letrasErradas.join(' ');
-                                                                escribirLetraErrada(mostrarLetrasErroneas)
-                                                                //alert("no esta esa letra en la palabra!")
-                                                                 dibujarParte(letrasErradas.length)   //poner aqui el codigo para mostrar partes de la persona
-                                                                 console.log("numero de intentos "+intentos);
-                                                            */
-                                                            }
-                                        }
-                                }
-                        multifuncion();
                                     
-                                function comprobarLetra()  {
-                                if (sum>0) {return true} else {return false}
+                                if(comprobarLetra(letra)==true) {}
+
+
+                                
+
+                                else {
+                                    var mostrarLetrasErroneas;
+                                                                            
+                                    letrasErradas.push(letra);
+                                    console.log("letras erradas array"+letrasErradas);
+                                    mostrarLetrasErroneas = letrasErradas.join(' ');
+                                    escribirLetraErrada(mostrarLetrasErroneas);
+                                    //alert("no esta esa letra en la palabra!")
+                                    dibujarParte(intentos-1);   //poner aqui el codigo para mostrar partes de la personaxxxxxxxxx
+                                    console.log("numero de intentos "+intentos);
+                                            
+
+
                                 }
 
-                        // console.log(comprobarLetra());  
-                          //comrpobaciones varias
+                            } 
+                        
 
-                          
-                    if(comprobarLetra(letra)==true) {}
+                        if(intentos==6){
 
-
-                    
-
-                    else {
-                        var mostrarLetrasErroneas;
-                                                                
-                        letrasErradas.push(letra);
-                        console.log("letras erradas array"+letrasErradas);
-                        mostrarLetrasErroneas = letrasErradas.join(' ');
-                        escribirLetraErrada(mostrarLetrasErroneas);
-                        //alert("no esta esa letra en la palabra!")
-                        dibujarParte(intentos-1);   //poner aqui el codigo para mostrar partes de la personaxxxxxxxxx
-                        console.log("numero de intentos "+intentos);
-                                
-
-
-                    }
-
-                } 
-            }  
-
-            if(intentos==6){
-
-                                escribirLetraErrada(mostrarLetrasErroneas)
-                                //alert("no esta esa letra en la palabra!")
-                                dibujarParte(intentos-1)   //poner aqui el codigo para mostrar partes de la personacxxxxxxxxxx
-                                console.log("numero de intentos "+intentos);
-                                this.removeEventListener("keyup", arguments.callee);
-                                
-                                setTimeout(preguntarSeguir, 1000, msgP);
-                                
-                                
-                                
-                            }
-            if(intentos>6){return}
-          });
-            
-//return letraIngresadaArray;  
+                                            escribirLetraErrada(mostrarLetrasErroneas)
+                                            //alert("no esta esa letra en la palabra!")
+                                            dibujarParte(intentos-1)   //poner aqui el codigo para mostrar partes de la personacxxxxxxxxxx
+                                            console.log("numero de intentos "+intentos);
+                                            this.removeEventListener("keyup", arguments.callee);
+                                            
+                                            setTimeout(preguntarSeguir, 1000, msgP);
+                                            
+                                            
+                                            
+                                        }
+                        if(intentos>6){return}
+                 }
+/*
+                 if(letraValida = false){
+                     console.log("estoy aqui")
+                    alert("Recuerda que debes ingresar sólo letras minúsculas, sin acentos!!!");
+                }
+*/
+        } 
+    });
  }
 
 

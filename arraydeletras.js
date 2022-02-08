@@ -1,16 +1,62 @@
 var palabrandom;
 var letrasSecretas=[];
 
+
+
+
+
+
+
+
 function palabra2Array() {
-    var palabrandom = arrayPalabras[Math.floor((numPalabras*Math.random()))];
+    
+    console.log("lsL inicial "+localStorage.length)
+    if(arrayPalabras.length=10){
+        if(localStorage.length>=1){
+            for(i=1; i <= localStorage.length; i++){
+              
+          console.log("i="+ i);
+          var nuevaPalabra;
+          nuevaPalabra = localStorage.getItem(i);;
+          console.log("ls o nuevapalabra"+ nuevaPalabra);
+         
+          arrayPalabras.push(nuevaPalabra);
+        
+        console.log("nuevo array "+arrayPalabras)
+
+            }
+
+        }
+
+        if(localStorage.length==0){
+            console.log("largo del ls "+localStorage.length)  
+            console.log("nuevo array largo"+arrayPalabras.length)
+            var palabrandom = arrayPalabras[Math.floor((arrayPalabras.length*Math.random()))];
+            var letrasSecretas = palabrandom.split('')
+            return letrasSecretas;
+
+        }
+
+                
+               
+    }
+    if(arrayPalabras.length>10){        
+    console.log("largo del ls "+localStorage.length)  
+    console.log("nuevo array largo"+arrayPalabras.length)
+    var palabrandom = arrayPalabras[Math.floor((arrayPalabras.length*Math.random()))];
     var letrasSecretas = palabrandom.split('')
     return letrasSecretas;
+    
+       }
+
+
+
+
+
 }
 
 
 function ocultarBoton(){
-
-
     document.getElementById("btnVisible").classList.add("btnInvisible")
 }
 
