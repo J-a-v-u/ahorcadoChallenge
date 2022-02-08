@@ -222,7 +222,7 @@ function reload() {
 
 function validar(word){
 
-    var patronletras = /^[a-z]+/;
+    var patronletras = /^[a-z\u00f1 ]+/;
     var letraValida = Boolean();
     letraValida = patronletras.test(word);
         if(letraValida){
