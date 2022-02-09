@@ -236,6 +236,25 @@ function validar(word){
 
 
 
+var letraRepetida = Boolean();
+
+function comprobarLetrasIguales(word){
+    for(i=0; i<=letraIngresadaArray.length; i++){
+        if(word==letraIngresadaArray[i]){
+            alert("Usted ya ingresó esa letra")
+            letraRepetida = true;
+            break;
+        }
+        else{
+            letraRepetida =false
+        }
+        
+    }
+}
+
+
+
+
 var letra;
 var n;
 var sum;
@@ -254,6 +273,10 @@ function escucharTeclado() {
         var letraValida = Boolean();
         letraValida = validar(letra);
         console.log("validacion " + letraValida)
+        comprobarLetrasIguales(letra);
+        console.log("validacion repetida " + letraRepetida)
+            if(letraRepetida==false){
+            
                        
                 if(letraValida){
                     letraIngresadaArray.push(letra);
@@ -354,17 +377,15 @@ function escucharTeclado() {
                                         }
                         if(intentos>6){return}
                  }
-/*
+                    /*
                  if(letraValida = false){
                      console.log("estoy aqui")
                     alert("Recuerda que debes ingresar sólo letras minúsculas, sin acentos!!!");
-                }
-*/
+                    } */
+            }
+            else{ return;}
         } 
     });
  }
-
-
-
 
 
