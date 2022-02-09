@@ -215,9 +215,9 @@ z-index: -1;
 
 .overlay {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0px;
-  left: 150px;
+  
   background: rgba(0, 0, 0, 0);
   transition: opacity 500ms;
   visibility: hidden;
@@ -229,7 +229,7 @@ z-index: -1;
   display: block;
   position: fixed;
   top: 80px;
-  left: 150px;
+  
   
   
  
@@ -255,7 +255,7 @@ z-index: -1;
   /*position: absolute;*/
   top: 0px;
   /*height: 900px;*/
-  max-width: 100%;
+  
   /*width: 1300px;*/
   margin-left: auto;
   margin-right: auto; 
@@ -267,11 +267,11 @@ z-index: -1;
  }
 #cerrar{
   position: absolute;
-  left: 1270px;
-  top: 0px;
+  right: 1vw;
+  top: 1vw;
   margin-right: auto; 
   transition: all 200ms;
-  font-size: 35px;
+  font-size: calc(1.5rem + 0.5vw);
   font-weight: bold;
   text-decoration: none;
   color: rgb(255, 0, 0);
