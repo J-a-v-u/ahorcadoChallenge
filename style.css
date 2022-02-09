@@ -7,6 +7,18 @@ body {
 img {
   max-width: 100%;
 } 
+
+@media (max-width:767px)
+{
+  .header
+  {
+    visibility: hidden;
+  }
+}
+
+
+
+
 section{
 
  background: url("images/atardecerhorca.png");
@@ -17,30 +29,48 @@ section{
 }
 
 
-.encabezado {
+
+.marco{
   
+  display: block;
+  margin-top: 0px; 
+  text-align: center;
+  width: 20vw;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 130, 28, 0.363);
+  border-radius: 1em; 
+  border: 6px solid #df1d03;
+  z-index: 2;
+}
+.marco p
+{
+  display: block;
+
+width: 15vw;
+margin-left: auto;
+margin-right: auto;
+
+}
+
+
+@media (max-width:1200px)
+{
+  .marco img
+  {
+    visibility: hidden;
+  }
+}
+
+
+.encabezado {
   color: rgb(250, 1, 1);
   font-weight: bold;
   font-size: calc(1rem + 2vw);
   text-align: center;
   z-index: 2;
 }
-.marco{
-  display: block;
- margin-top: 0px;
- 
-  text-align: center;
-  width: 300px;
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(255, 130, 28, 0.363);
-  border-radius: 1em;
- 
-  border: 6px solid #df1d03;
-  z-index: 2;
-}
-
 .gifsangre{
   margin-top: 3px;
 z-index: -1;
@@ -304,7 +334,7 @@ margin-right: 50px;
 .buttons {
   margin-top: 50px;
   text-align: center;
-  width: 200px;
+  width: 10vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -313,14 +343,15 @@ margin-right: 50px;
 .buttons2 {
   margin-top: 50px;
   text-align: center;
-  width: 200px;
+  width: 10vw;
   margin-left: auto;
   margin-right: auto;
 }
 .buttons3 {
+  color: rgb(255, 255, 255);
   margin-top: 10px;
   text-align: center;
-  width: 200px;
+  width: 10vw;
   height: 70px;
   margin-left: auto;
   margin-right: auto;
@@ -331,7 +362,7 @@ margin-right: 50px;
 .blob-btn {
   z-index: 1;
   position: relative;
-  padding: 20px 46px;
+  padding: 1.5em 3em;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
@@ -441,28 +472,23 @@ margin-right: 50px;
 
 .site-footer
 {
+  
   background-color:#26272b;
-  padding:45px 0 20px;
-  font-size: calc(1rem + 0.2vw);
+  padding: 0.65vw 0 2vw;
+  font-size: calc(1rem + 0.5vw);
   line-height:24px;
   color:#737373;
 }
-.site-footer hr
-{
-  border-top-color:#bbb;
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
-}
+
 .site-footer h6
 {
+  
   color:#fff;
   font-size: calc(1rem + 0.2vw);
   text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
+  margin-top: 1vw;
+  letter-spacing:2px;
+  margin: 0.91vw;
 }
 .site-footer a
 {
@@ -497,29 +523,26 @@ margin-right: 50px;
 }
 .site-footer .social-icons
 {
+ 
   text-align:right
 }
 .site-footer .social-icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
+{ 
+ 
   margin-left:6px;
   margin-right:0;
   border-radius:100%;
   background-color:#33353d
 }
+.text-justify
+{
+  margin: 0.91vw
+}
 .copyright-text
 {
-  margin:0
+  margin: 0.91vw
 }
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
-  }
-}
+
 @media (max-width:767px)
 {
   .site-footer
@@ -555,9 +578,7 @@ margin-right: 50px;
   color:#818a91;
   font-size: calc(1rem + 0.2vw);
   display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
+ 
   text-align:center;
   margin-right:8px;
   border-radius:100%;
