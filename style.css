@@ -3,6 +3,10 @@ body {
   background-color: rgb(0, 0, 0);
  
 }
+
+img {
+  max-width: 100%;
+} 
 section{
 
  background: url("images/atardecerhorca.png");
