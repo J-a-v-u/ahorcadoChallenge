@@ -300,9 +300,41 @@ margin-right: auto;
 
 .espaciotablero{
 display: block;
+height: 90vw;
+width: 90vw;
 margin-left: 50px;
 margin-right: 50px; 
 }
+
+
+
+@media (max-width: 1023px)
+{
+  #tablero
+  {
+      width:75%;
+      float:left;
+  }
+}
+
+
+
+@media (max-width: 780px)
+{
+  #tablero
+  {
+      width:50%;
+      float:left;
+  }
+}
+
+
+
+
+
+
+
+
 
 /****************boton blob******************/
 
