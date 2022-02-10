@@ -5,84 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-   
-
-      
     <img class="header" src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" width = "150" height ="100" align="left" />
     <img class="header" src="https://www.oracle.com/a/ocom/img/rh03-lad-one-logo.png" width = "290" height ="200" align="right" />
     <title>Ahorcado</title>
     <link rel="stylesheet" href="style.css">
- <section>
 
-
-
-      </head>
-       <body>
-
-
-     <div class="marco">
-      <p class="encabezado" style="text-align:center" class="titulo">Ahorcado</p>
-      <div class="gifsangre">
-        <img src="https://3.bp.blogspot.com/-_zxWvZJ06po/UTZaXyfHAHI/AAAAAAAAAns/3xRTkr1R29Y/s1600/bloodm10.gif" width = "293" height ="100" align="center" />
-
-      </div>
-    </div>
-
-  <!--***<body onload="draw()">   ****-->
-
-
-
-
-  <!--*** INICIO SANGRADO ****-->
 
  
 
+      </head>
+       <body>
+<div class="contenedor">
+
+    <div class="marco">
+        <p class="encabezado" style="text-align:center" class="titulo">Ahorcado</p>
+        <div class="gifsangre">
+           <img src="https://3.bp.blogspot.com/-_zxWvZJ06po/UTZaXyfHAHI/AAAAAAAAAns/3xRTkr1R29Y/s1600/bloodm10.gif" width = "293" height ="100" align="center" />
+        </div>
+    </div>
+
+    <!--***************** INICIO SANGRADO ***********************-->
+
       <div class="sangrado">
-      
-          <div>  <img src="images/gota.png" height="40px" width="40px" > </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
           <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-      
+          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
       </div>
       
       
-      <div class="sangrado2">
-      
+      <div class="sangrado2">      
           <div>  <img src="images/gota.png" height="70px" width="70px" > </div>
           <div>  <img src="images/gota.png" height="70px" width="70px"> </div>
           <div>  <img src="images/gota.png" height="70px" width="70px"> </div>
       </div>
       
 
- <!--*** FIN SANGRADO ****-->
+ <!--*********************** FIN SANGRADO ********************-->
 
-  <!--*** boton ****-->
+  <!--********************** botones *************************-->
 
-  <a href="#popup1" onclick="draw()">
- <div class="buttons" >
-  <button class="blob-btn">
-    JUGAR!!!
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
+<a href="#popup1" onclick="draw()">
+  <div class="buttons" >
+    <button class="blob-btn">
+      JUGAR!!!
+      <span class="blob-btn__inner">
+        <span class="blob-btn__blobs">
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+          <span class="blob-btn__blob"></span>
+        </span>
       </span>
-    </span>
-  </button>
- </div>
+    </button>
+  </div>
 </a>
  
-<div style="text-align:center">
-  <input class="text-input" type="text" id="input-nueva-palabra"  placeholder="Escriba una nueva palabra">
-  
+<div style="text-align:center"> <!--***CAJA DE TEXTO***-->
+  <input class="text-input" type="text" id="input-nueva-palabra"  placeholder="Escriba una nueva palabra">  
 </div>
-
 
 <div class="buttons2" id="add" >
   <button class="blob-btn" onclick="escucharBoton()" >
@@ -111,29 +95,14 @@
 
 
 
+</div>
 
- <!--**
-   
-     
-
- ***-->
-
-
-    <div style="text-align:center;">
-      <canvas id="ahorcado" height="800px" width="1200px"></canvas>
-    </div>
-
-
-
-
-
-    <div id="popup1" class="overlay"> <!--***   ****-->
-      <div id="popupBody">
-         
+<!--************************POP UPDEL JUEGO***********************-->
+    <div id="popup1" class="overlay"> <!--***CONTENEDOR***-->
+      <div id="popupBody">         
           <a id="cerrar" href="#">&times;</a>
 
-
-          <div class="buttons3" id="btnVisible">
+          <div class="buttons3" id="btnVisible"><!--***BOTON***-->
             <button class="blob-btn" onclick="dibujarGuiones()" >
               INICIAR JUEGO
               <span class="blob-btn__inner">
@@ -147,26 +116,19 @@
             </button>
           </div>
 
+          <div style="text-align:center"> <!--***CAJA DE TEXTO***-->
+            <input class="text-input-mobi" type="text" id="input-letra-mobi"  placeholder="Escriba una letra">  
+          </div>
 
 
-            <div class ="espaciotablero">
 
+          <div class ="espaciotablero"><!--***CANVAS***-->
                   <canvas id="tablero" width="1200" height="800">
                   </canvas>
-
-
-            </div>
-
-  
-
+          </div>
       </div>
     </div>
-              
-
-
-  </section>
-
-
+   
 
     
     <script type="text/javascript" src="palabrarandom.js"></script>
@@ -177,54 +139,31 @@
 
 
 
+
   </body>
 
-
-
-
-
-
- <!-- Site footer -->
+ <!--**************************FOOTER********************-->
  <footer class="site-footer">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-6">
+  
+
+      <div class="footer-izq">
         <h6>About</h6>
         <p class="text-justify">Diseño web, fondo, iconos y ahorcado por:<i> Javier Vieira Nobre.</i> </p>
-        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
-          <a href="#">mentira XD</a>.
-             </p>
-
+        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by <a href="#">mentira XD</a>.</p>
       </div>
-
-      
-
-     <!--***   
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-sm-6 col-xs-12">
-        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
-     <a href="#">mentira XD</a>.
-        </p>
-      </div>
-****-->
-      <div class="col-md-4 col-sm-6 col-xs-12">
+                    
+      <div class="footer-der">
         <ul class="social-icons">
-          <li><a class="facebook" href="https://www.facebook.com/profile.php?id=594804528"><img src="images/face.png"  ><i></i></a></li>
-          <li><a class="github" href="https://github.com/J-a-v-u/ahorcadoChallenge/tree/gh-pages"><img src="images/github.png"  ><i></i></a></li>
-          <li><a class="linkedin" href="https://www.linkedin.com/in/javier-alejandro-vieira-nobre-65426922b/"><img src="images/linkedin.png"  ><i></i></a></li>   
+          <li><a class="facebook" href="https://www.facebook.com/profile.php?id=594804528"><img src="images/face.png" ><i></i></a></li>
+          <li><a class="github" href="https://github.com/J-a-v-u/ahorcadoChallenge/tree/gh-pages"><img src="images/github.png" ><i></i></a></li>
+          <li><a class="linkedin" href="https://www.linkedin.com/in/javier-alejandro-vieira-nobre-65426922b/"><img src="images/linkedin.png" ><i></i></a></li>   
         </ul>
       </div>
-    </div>
+
+   
   </div>
 </footer>
-
-
-
-
-
-
-
 
 
 </html>
