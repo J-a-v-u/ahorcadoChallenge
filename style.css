@@ -267,20 +267,60 @@ margin-right: auto;
   background: rgba(63, 14, 1, 0.85);
   }
 
-.text-input-mobi{
+  .marco-mobi{
+
+    display: block;
+    position: absolute;
+    top: 70vw;
+    width: 30vw;
+    right: 22vw;
+    
+    text-align: center;
+
+  }
+
+#input-letra-mobi{
+
+ 
+  display: block;
+ 
+  margin-left: auto;
+  margin-right: auto;
+  
+  height: 6vw;
+  visibility: hidden;
+}
+
+.mobi-btn{
 
   display: block;
-  position: absolute;
-  right: 5vw;
-  top: 15vw;
-  margin-right: auto; 
-  height: 5vw;
-  visibility: hidden;
+
+margin-left: auto;
+margin-right: auto;
+visibility: hidden;
+width: 16vw;
+height: 10vw;
+text-transform: uppercase;
+color: rgb(228, 94, 94);
+font-size: calc(0.87rem + 0.15vw);
+font-weight: bold;
+background-color: transparent;
+border: 1vw solid #ff1e01;
+border-radius: 2vw;
+}
+.mobi-btn:hover {
+  background-color: rgb(165, 1, 1);
+  color: rgb(231, 100, 100);
+  transition: 0.3s;
 }
 
 @media (max-width: 780px)
 {
-  .text-input-mobi
+  #input-letra-mobi
+  {
+    visibility: visible;
+  }
+  .mobi-btn
   {
     visibility: visible;
   }
@@ -564,13 +604,9 @@ margin-right: 50px;
 
 @media (max-width:767px)
 {
-  .site-footer
+  .footer-izq
   {
-    padding-bottom:0
-  }
-  .site-footer .copyright-text,.site-footer .social-icons
-  {
-    text-align:center
+   visibility: hidden;
   }
 }
 .social-icons
