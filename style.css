@@ -65,7 +65,7 @@ margin-right: auto;
 {
   .marco
   {
-    height: 5.5vh;
+    height: 6.5vw;
     position: absolute;
       left: 0;
   }
@@ -296,7 +296,7 @@ margin-right: auto;
 
     display: block;
     position: absolute;
-    top: 70vw;
+    top: 50vh;
     width: 30vw;
     right: 22vw;
     
@@ -323,8 +323,8 @@ margin-right: auto;
 margin-left: auto;
 margin-right: auto;
 visibility: hidden;
-width: 20vw;
-height: 5vh;
+width: 25vw;
+height:8vw;
 text-transform: uppercase;
 color: rgb(228, 94, 94);
 font-size: calc(0.87rem + 0.15vw);

@@ -1,4 +1,17 @@
+
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+
+
 function draw() {
+    toggleFullScreen();
     console.log("largo array "+ numPalabras);
     var canvas = document.getElementById("tablero");
     if (canvas.getContext) {
