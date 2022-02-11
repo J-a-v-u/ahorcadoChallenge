@@ -2,10 +2,10 @@
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen();
-    } else {
+    /*} else {
       if (document.exitFullscreen) {
         document.exitFullscreen();
-      }
+      }*/
     }
   }
 
@@ -427,9 +427,10 @@ function escucharTeclado() {
                     });
     }
     if(teclado==false){
+        toggleFullScreen();
         const textBox = document.querySelector('#input-letra-mobi')
         console.log("el box dice: " + textBox.value)
-        var letra=textBox.value;
+        var letra=textBox.value.toLowerCase();
         //falta boton y asignar letra a textBox.value, averiguar como limitar a 1 el campo de texto
         var letraValida = Boolean();
         letraValida = validar(letra);
