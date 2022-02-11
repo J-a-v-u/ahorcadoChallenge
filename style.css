@@ -296,7 +296,8 @@ margin-right: auto;
 
     display: block;
     position: absolute;
-    top: 50vh;
+    top: 2vw;
+    left: 0vw;
     width: 30vw;
     right: 22vw;
     
@@ -344,6 +345,7 @@ border-radius: 2vw;
   #input-letra-mobi
   {
     visibility: visible;
+    width: 50%;
   }
   .mobi-btn
   {
