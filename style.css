@@ -48,7 +48,7 @@ z-index: -1;
 .marco p
 {
 display: block;
-width: 15vw;
+
 margin-left: auto;
 margin-right: auto;
 }
@@ -73,9 +73,10 @@ margin-right: auto;
 
 
 .encabezado {
+  width: 14vw;
   color: rgb(250, 1, 1);
   font-weight: bold;
-  font-size: calc(0.5rem + 2vw);
+  font-size: calc(0.4rem + 2vw);
   text-align: center;
   z-index: 2;
 }
@@ -434,7 +435,7 @@ margin-right: 50px;
  
     margin-top: 10px;
   text-align: center;
-  width: 25vw;
+  width: 29vw;
   height: 70px;
   margin-left: auto;
   margin-right: auto;
