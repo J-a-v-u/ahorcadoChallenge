@@ -2,15 +2,11 @@
 function toggleFullScreen() {
     if (!document.fullscreenElement) {
         document.documentElement.requestFullscreen();
-    /*} else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }*/
     }
   }
 
 
-function draw() {
+function draw() {     /*** funcion que dibuja la horca en el canvas ***/
     toggleFullScreen();
     console.log("largo array "+ numPalabras);
     var canvas = document.getElementById("tablero");
@@ -19,10 +15,7 @@ function draw() {
       ctx.strokeStyle = "rgb(255, 2, 36)";
       ctx.strokeRect(0, 0, 1200, 800)
 
-
-    
-
-
+/*** gradientes ***/
       var lingrad1 = ctx.createLinearGradient(20, 730, 20, 780);
       lingrad1.addColorStop(0, 'rgb(255, 198, 41)');
       lingrad1.addColorStop(0.5,'rgba(255, 217, 0, 0.2)');
@@ -39,29 +32,26 @@ function draw() {
       lingrad3.addColorStop(0.5,'rgba(255, 217, 0, 0.2)');
       lingrad3.addColorStop(1, 'black');
 
-      //mastil
+ //mastil
 
       ctx.fillStyle = lingrad2;
       //"rgba(255, 217, 0, 0.4)";
       ctx.fillRect (50, 180, 40, 550);
       
 
-      //horizontal
+//horizontal
       ctx.fillStyle = lingrad3;
       ctx.fillRect (50, 160, 350, 20);
 
-      //base
+//base
       ctx.fillStyle = lingrad1;
       //ctx.fillStyle = "rgba(255, 217, 0, 0.2)";
       ctx.fillRect (20, 730, 1160, 50);
 
-      //soga
+//soga
       ctx.fillStyle = "rgba(255, 217, 0, 0.4)";
       ctx.fillRect (350, 160, 10, 90);
-
-
-
-    
+ 
 
       ctx.shadowOffsetX = 5;
       ctx.shadowOffsetY = 5;
@@ -81,18 +71,8 @@ function draw() {
 
 
 
-
-
-
-
-
-
-
-
-
-
   
-function dibujarParte(num) {
+function dibujarParte(num) {    /*** dibuja las distintas partes de la persona ***/
 
     var canvas = document.getElementById("tablero");
     if (canvas.getContext) {
@@ -185,31 +165,10 @@ function dibujarParte(num) {
                                 ctx.closePath();  
                         }
     
-    
-    
-    
-    
                     }
     
     }
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -233,7 +192,7 @@ function reload() {
 
 
 
-function validar(word){
+function validar(word){  /***validacion letras minusculas liberando el f1 por las dudas ***/
 
     var patronletras = /^[a-z\u00f1 ]+/;
     var letraValida = Boolean();
@@ -249,7 +208,7 @@ function validar(word){
 
 
 
-var letraRepetida = Boolean();
+var letraRepetida = Boolean();   /***validacion para letras ya ingresadas ***/
 
 function comprobarLetrasIguales(word){
     for(i=0; i<=letraIngresadaArray.length; i++){
@@ -266,9 +225,12 @@ function comprobarLetrasIguales(word){
 }
 
 
+
 var teclado = Boolean();
 
-function verificarTeclado(){
+function verificarTeclado(){    /*** esta funcion usa que el media query cambia la visibilidad en el elemento para saber
+                                 que al tener una pantalla chica, estamos en un celular y no tenemos a nuestra disposicion
+                              el teclado y poder habilitar un input de texto para dispositivos moviles (en otra funcion) ***/
     var visible;
     const element = document.querySelector('#input-letra-mobi')
     const style = getComputedStyle(element)
@@ -288,11 +250,6 @@ console.log("teclado es "+ teclado);
 
 
 
-
-
-
-
-
 var letra;
 var n;
 var sum;
@@ -302,7 +259,7 @@ var letrasErradas = [];
 letrasErradas[0] = " ";
 var letrasCorrectas = [];
 
-function escucharTeclado() {
+function escucharTeclado() {   /*** funcion principal ***/
     verificarTeclado();
     if(teclado==true){
                     window.addEventListener("keyup", function (event) {

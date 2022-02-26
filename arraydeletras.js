@@ -1,16 +1,9 @@
 var palabrandom;
 var letrasSecretas=[];
 
-
-
-
-
-
-
-
-function palabra2Array() {
-    
-    console.log("lsL inicial "+localStorage.length)
+function palabra2Array() {      /***esta funcion elige una palabra random de la lista y la convierte en un array, 
+                                     previo checkeo de si se agregaron palabras en el local storage y 
+                                              en el caso de que falten agregar, las agrega******/
     if(arrayPalabras.length=10){
         if(localStorage.length>=1){
             for(i=1; i <= localStorage.length; i++){
@@ -56,15 +49,10 @@ function palabra2Array() {
 }
 
 
+
 function ocultarBoton(){
     document.getElementById("btnVisible").classList.add("btnInvisible")
 }
-
-
-
-
-
-
 
 
 
@@ -91,7 +79,6 @@ function dibujarGuiones() {   //escribe guiones por primera vez
      console.log(guionesMostrado)
      escribirEnCanvas(guionesMostrado);
      
-     //return guionesLetrasMostrado;
 escucharTeclado();
 }
 
@@ -99,17 +86,7 @@ escucharTeclado();
 
 
 
-
-
-
-
-
-
-
-
-
-
-function escribirEnCanvas(texto){
+function escribirEnCanvas(texto){      /*** escribe en el canvas la variable "texto" ***/
     var canvas = document.getElementById("tablero");
     if (canvas.getContext) {
       var ctx = canvas.getContext("2d");
@@ -124,7 +101,7 @@ function escribirEnCanvas(texto){
             }
 }
 
-function escribirLetraErrada(texto){
+function escribirLetraErrada(texto){       /***escribe la letra errada en su respectivo lugar ***/
     var canvas = document.getElementById("tablero");
     if (canvas.getContext) {
       var ctx = canvas.getContext("2d");

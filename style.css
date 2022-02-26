@@ -20,7 +20,7 @@ img {
 } 
 .header
 {
-z-index: -1;
+  z-index: -1;
 }
 
 
@@ -47,10 +47,9 @@ z-index: -1;
 }
 .marco p
 {
-display: block;
-
-margin-left: auto;
-margin-right: auto;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 @media (max-width:1280px)
@@ -100,70 +99,69 @@ margin-right: auto;
   }
   
   /**************GOTAS CHICAS**************/
-  .sangrado div{
+.sangrado div{
   position:absolute;
   display: block;
   }
   
-  .sangrado div:nth-child(1){
-      left: 7%;
-      animation: animate 1.1s linear infinite;
-      animation-delay: -4s;
+.sangrado div:nth-child(1){
+  left: 7%;
+  animation: animate 1.1s linear infinite;
+  animation-delay: -4s;
   }
-  .sangrado div:nth-child(2){
-      left: 24%;
-      animation: animate 1.3s linear infinite;
-      animation-delay: -2s;
+.sangrado div:nth-child(2){
+  left: 24%;
+  animation: animate 1.3s linear infinite;
+  animation-delay: -2s;
   }
-  .sangrado div:nth-child(3){
-      left: 31%;
-      animation: animate 1.8s linear infinite;
-      animation-delay: -7s;
+.sangrado div:nth-child(3){
+  left: 31%;
+  animation: animate 1.8s linear infinite;
+  animation-delay: -7s;
   }
-  .sangrado div:nth-child(4){
-      left: 47%;
-      animation: animate 1.3s linear infinite;
-      animation-delay: -3s;
+.sangrado div:nth-child(4){
+  left: 47%;
+  animation: animate 1.3s linear infinite;
+  animation-delay: -3s;
   }
-  .sangrado div:nth-child(5){
-      left: 59%;
-      animation: animate 1.1s linear infinite;
-      animation-delay: -6s;
+.sangrado div:nth-child(5){
+  left: 59%;
+  animation: animate 1.1s linear infinite;
+  animation-delay: -6s;
   }
-  .sangrado div:nth-child(6){
-      left: 70%;
-      animation: animate 1.1s linear infinite;
-      animation-delay: -4s;
+.sangrado div:nth-child(6){
+  left: 70%;
+  animation: animate 1.1s linear infinite;
+  animation-delay: -4s;
   }
-  .sangrado div:nth-child(7){
-      left: 90%;
-      animation: animate 1.1s linear infinite;
-      animation-delay: -4s;
+.sangrado div:nth-child(7){
+  left: 90%;
+  animation: animate 1.1s linear infinite;
+  animation-delay: -4s;
   }
-  /**************GOTAS GRANDES**************/
+ /**************GOTAS GRANDES**************/
   
-  .sangrado2 div{
-      position: absolute;
-      display: block;
-      
-      }
-      .sangrado2 div:nth-child(1){
-          left: 15%;
-          animation: animate 1.7s linear infinite;
-          animation-delay: -6s;
-      }
-      .sangrado2 div:nth-child(2){
-          left: 48%;
-          animation: animate 1.5s linear infinite;
-          animation-delay: -2s;
-      }
-      .sangrado2 div:nth-child(3){
-          left: 89%;
-          animation: animate 1.8s linear infinite;
-          animation-delay: -7s;
-      }
+.sangrado2 div{
+  position: absolute;
+  display: block; 
+}
+.sangrado2 div:nth-child(1){
+  left: 15%;
+  animation: animate 1.7s linear infinite;
+  animation-delay: -6s;
+}
+.sangrado2 div:nth-child(2){
+  left: 48%;
+  animation: animate 1.5s linear infinite;
+  animation-delay: -2s;
+}
+.sangrado2 div:nth-child(3){
+  left: 89%;
+  animation: animate 1.8s linear infinite;
+  animation-delay: -7s;
+}
   
-  @keyframes animate {
+@keyframes animate {
       0%{
           top: -10%;
       }
@@ -276,8 +274,7 @@ margin-right: auto;
 
 .overlay:target {
   visibility: visible;
-  opacity: 1;
-  
+  opacity: 1;  
 }
 
 #popupBody{
@@ -293,47 +290,38 @@ margin-right: auto;
   background: rgba(63, 14, 1, 0.85);
   }
 
-  .marco-mobi{
-
-    display: block;
-    position: absolute;
-    top: 2vw;
-    left: 0vw;
-    width: 30vw;
-    right: 22vw;
-    
-    text-align: center;
-
-  }
+.marco-mobi{
+  display: block;
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 30vw;
+  right: 22vw;
+  text-align: center;
+}
 
 #input-letra-mobi{
-
- 
   display: block;
- 
   margin-left: auto;
   margin-right: auto;
-  
   height: 6vw;
   visibility: hidden;
 }
 
 .mobi-btn{
-
   display: block;
-
-margin-left: auto;
-margin-right: auto;
-visibility: hidden;
-width: 25vw;
-height:8vw;
-text-transform: uppercase;
-color: rgb(228, 94, 94);
-font-size: calc(0.87rem + 0.15vw);
-font-weight: bold;
-background-color: transparent;
-border: 1vw solid #ff1e01;
-border-radius: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+  width: 25vw;
+  height:8vw;
+  text-transform: uppercase;
+  color: rgb(228, 94, 94);
+  font-size: calc(0.87rem + 0.15vw);
+  font-weight: bold;
+  background-color: transparent;
+  border: 1vw solid #ff1e01;
+  border-radius: 2vw;
 }
 .mobi-btn:hover {
   background-color: rgb(165, 1, 1);
@@ -367,11 +355,11 @@ border-radius: 2vw;
 }
 
 .espaciotablero{
-display: block;
-height: 90vw;
-width: 90vw;
-margin-left: 50px;
-margin-right: 50px; 
+  display: block;
+  height: 90vw;
+  width: 90vw;
+  margin-left: 50px;
+  margin-right: 50px; 
 }
 
 
@@ -421,7 +409,6 @@ margin-right: 50px;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 
 .buttons2 {
@@ -489,9 +476,6 @@ margin-right: 50px;
   
 }
 
-
-
-
 .blob-btn:before {
   content: "";
   z-index: 1;
@@ -502,8 +486,6 @@ margin-right: 50px;
   height: 100%;
   border: 6px solid #ff1e01;
 }
-
-
 
 .blob-btn:after {
   content: "";
