@@ -1,89 +1,126 @@
 body {  
    background-color: rgb(0, 0, 0); 
-}
-.contenedor {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;  
-  height: 100%;
-  margin: 0 auto;
-  background: url("images/atardecerhorca.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: -1;
+   background: url("images/atardecerhorca.png");
+   background-repeat: no-repeat;
+   background-size:cover;
+   width: 100%;
+   height: auto;
+   background-color: rgb(0, 0, 0); 
 }
 
-img {
-  max-width: 100%;
-} 
-.header
-{
-  z-index: -1;
-}
+
+
+header{
+   margin: 0;
+   width: 100%;
+  }
+  
+   .header-izq{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 15%;
+  }
+  .header-izq img{
+   width: 100%;
+  }
+  
+  .header-der{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 20%;
+   
+  }
+  
+  .header-der img{
+   width: 100%;
+  }
+  
 
 
 @media (max-width:767px)
 {
-  .header
+  header
   {
     visibility: hidden;
   }
 }
 
+
+
+
+
+.contenedor {
+  width: 100%;  
+  height: 100%;
+   
+}
+
+img {
+  max-width: 100%;
+} 
+
+
+
+
 .marco{
-  display: block;
-  margin-top: 0px; 
+  margin: -9% 30% 10% 30%;
   text-align: center;
-  width: 20vw;
+  width: 40%;
   height: 8vh;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 130, 28, 0.363);
+  background-color: rgba(2, 1, 1, 0.3);
   border-radius: 1em; 
   border: 6px solid #df1d03;
   z-index: 2;
 }
 .marco p
 {
- display: block;
  margin-left: auto;
  margin-right: auto;
 }
 
 @media (max-width:1280px)
 {
+
   .marco img
   {
     visibility: hidden;
   }
 }
 
-@media (max-width: 767px)
-{
-  .marco
-  {
-    height: 6.5vw;
-    width: 25vw;
-    position: absolute;
-      left: 0;
+
+@media (max-width: 767px){
+
+  .marco{
+      
+    margin: -36% 20% 1% 22%;
+    width: 60%;
   }
+
+  .marco p{
+  font-size: calc( 1rem + 4vw);
+  }
+
 }
 
 
 .encabezado {
-  width: 14vw;
-  color: rgb(250, 1, 1);
+  display: block;
+  height: 5vw;
+  color: rgb(247, 103, 103);
   font-weight: bold;
-  font-size: calc(0.4rem + 2vw);
+  font-size: calc(0.4rem + 3vw);
   text-align: center;
   z-index: 2;
+ 
 }
 
 .gifsangre{
   position: relative;
-  margin-top: 0.9vw;
+  margin-top: -1vw;
   z-index: -1;
 
 }
@@ -93,304 +130,85 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 95%;
+  height: 95%;
   pointer-events: none;
   }
   
-  /**************GOTAS CHICAS**************/
+  /**************GOTAS**************/
 .sangrado div{
   position:absolute;
   display: block;
+  width: 2%;
+  height: auto;
   }
-  
+
+   
 .sangrado div:nth-child(1){
   left: 7%;
   animation: animate 1.1s linear infinite;
   animation-delay: -4s;
   }
 .sangrado div:nth-child(2){
+  left: 15%;
+  animation: animate 1.7s linear infinite;
+  animation-delay: -6s;
+  }
+.sangrado div:nth-child(3){
+  width: 3%;
   left: 24%;
   animation: animate 1.3s linear infinite;
   animation-delay: -2s;
   }
-.sangrado div:nth-child(3){
+.sangrado div:nth-child(4){
   left: 31%;
   animation: animate 1.8s linear infinite;
   animation-delay: -7s;
   }
-.sangrado div:nth-child(4){
-  left: 47%;
+.sangrado div:nth-child(5){
+  left: 44%;
   animation: animate 1.3s linear infinite;
   animation-delay: -3s;
   }
-.sangrado div:nth-child(5){
+.sangrado div:nth-child(6){
+  width: 4%;
+  left: 50%;
+  animation: animate 1.5s linear infinite;
+  animation-delay: -2s;
+  }
+.sangrado div:nth-child(7){
   left: 59%;
   animation: animate 1.1s linear infinite;
   animation-delay: -6s;
   }
-.sangrado div:nth-child(6){
+.sangrado div:nth-child(8){
   left: 70%;
   animation: animate 1.1s linear infinite;
   animation-delay: -4s;
   }
-.sangrado div:nth-child(7){
-  left: 90%;
+.sangrado div:nth-child(9){
+  width: 3%;
+  left: 85%;
+  animation: animate 1.8s linear infinite;
+  animation-delay: -7s;
+  }
+.sangrado div:nth-child(10){
+  left: 92%;
   animation: animate 1.1s linear infinite;
   animation-delay: -4s;
   }
- /**************GOTAS GRANDES**************/
-  
-.sangrado2 div{
-  position: absolute;
-  display: block; 
-}
-.sangrado2 div:nth-child(1){
-  left: 15%;
-  animation: animate 1.7s linear infinite;
-  animation-delay: -6s;
-}
-.sangrado2 div:nth-child(2){
-  left: 48%;
-  animation: animate 1.5s linear infinite;
-  animation-delay: -2s;
-}
-.sangrado2 div:nth-child(3){
-  left: 89%;
-  animation: animate 1.8s linear infinite;
-  animation-delay: -7s;
-}
-  
+
+ 
 @keyframes animate {
       0%{
-          top: -10%;
+          top: 1%;
       }
       100%{
-          top:110%;
+          top:99%;
       }    
   }
-  
+ 
 /*****************FIN ANIMACION DE GOTEO*****************/  
-
-.titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
-  color: rgb(247, 80, 80);
-}
-
-.cuerpo{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px; 
-  border: 0;
-  color: white;
-  font-weight: bold;
-  background-color: rgba(204, 61, 42, 0.3);
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 1em;
- }
-
-#btnvisible {
-  color: white;
-  margin-top: 10px;
-  text-align: center;
-  width: 300;
-  margin-left: auto;
-  margin-right: auto;
-  transition: opacity 500ms;
-  opacity: 1;
-}
-
-.btnInvisible {
-  margin-top: 10px;
-  text-align: center;
-  width: 1000;
-  margin-left: auto;
-  margin-right: auto;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.text-input {
-  color: rgb(247, 80, 80);
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 767px)
-{
-  .text-input
-  {
-    top:20vh;
-    display: block;
-    height: 5.5vh;
-    position: absolute;
-      left: 0;
-  }
-}
-
-
-/****************pop up****************/
-
-.overlay {
-  display: block;
-  position: fixed;
-  top: 0px;
-  left: 10%;
-  right: 10%;
-  background: rgba(0, 0, 0, 0);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-  z-index: 15;
-}
-
-.visible{
-  display: block;
-  position: fixed;
-  top: 80px;
-  background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
-  visibility: visible;
-  opacity: 1;
-}
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1;  
-}
-
-#popupBody{
-  display: block;
-  /*position: absolute;*/
-  top: 0px;
-  /*height: 900px;*/
-  /*width: 1300px;*/
-  margin-left: auto;
-  margin-right: auto; 
-  border-radius: 15px;
-  box-shadow: 0 0 5px #CCC;
-  background: rgba(63, 14, 1, 0.85);
-  }
-
-.marco-mobi{
-  display: block;
-  position: absolute;
-  top: 2vw;
-  left: 0vw;
-  width: 30vw;
-  right: 22vw;
-  text-align: center;
-}
-
-#input-letra-mobi{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 6vw;
-  visibility: hidden;
-}
-
-.mobi-btn{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  visibility: hidden;
-  width: 25vw;
-  height:8vw;
-  text-transform: uppercase;
-  color: rgb(228, 94, 94);
-  font-size: calc(0.87rem + 0.15vw);
-  font-weight: bold;
-  background-color: transparent;
-  border: 1vw solid #ff1e01;
-  border-radius: 2vw;
-}
-.mobi-btn:hover {
-  background-color: rgb(165, 1, 1);
-  color: rgb(231, 100, 100);
-  transition: 0.3s;
-}
-
-@media (max-width: 780px)
-{
-  #input-letra-mobi
-  {
-    visibility: visible;
-    width: 50%;
-  }
-  .mobi-btn
-  {
-    visibility: visible;
-  }
-}
-#cerrar{
-  position: absolute;
-  right: 1vw;
-  top: 1vw;
-  margin-right: auto; 
-  transition: all 200ms;
-  font-size: calc(1.5rem + 0.5vw);
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(255, 0, 0);
-  z-index: 15;
-}
-
-.espaciotablero{
-  display: block;
-  height: 90vw;
-  width: 90vw;
-  margin-left: 50px;
-  margin-right: 50px; 
-}
-
-
-
-@media (max-width: 1023px)
-{
-  #tablero
-  {
-      width:75%;
-      float:left;
-  }
-}
-
-
-
-@media (max-width: 780px)
-{
-  #tablero
-  {
-      width:50%;
-      float:left;
-  }
-}
-
-
-
-
-
-
-
-
 
 /****************boton blob******************/
 
@@ -402,36 +220,25 @@ img {
 }
 
 .buttons {
-  display: block;
-  margin-top: 50px;
+  margin: 2% 35%;
   text-align: center;
-  width: 10vw;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
 .buttons2 {
-  display: block;
-  margin-top: 50px;
+  margin: 2% 35%;
   text-align: center;
-  width: 10vw;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
 .buttons3 {
- 
-    margin-top: 10px;
+  margin: 1vw;
   text-align: center;
   width: 29vw;
   height: 70px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(165, 111, 111);
-  background-size: 10vw 70px;
-  border: 1vw #CCC;
+ 
 }
 
 .blob-btn {
@@ -441,10 +248,10 @@ img {
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
+  color: rgb(228, 131, 131);
   font-size: calc(0.87rem + 0.15vw);
   font-weight: bold;
-  background-color: transparent;
+  background-color: rgba(39, 9, 1, 0.3);
   outline: none;
   border: none;
   transition: color 0.5s;
@@ -558,12 +365,171 @@ img {
 
 }
 
+
+
+/****caja de texto nueva palabra****/
+
+
+
+
+.text-input {
+  color: rgb(247, 80, 80);
+  border-radius: 0.5em;
+  border: 5px solid rgb(151 31 31);
+  margin: 1vw;
+  padding: 0.5em;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px)
+{
+  .text-input
+  {
+    top:20vh;
+    display: block;
+    height: 5.5vh;
+    position: absolute;
+      left: 0;
+  }
+}
+
+
+/****************pop up****************/
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 10%;
+  right: 10%;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 15;
+  background: rgba(63, 14, 1, 0.85);
+   border-radius: 15px;
+}
+
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;  
+}
+
+
+
+.espaciotablero{  
+    width: auto;
+    margin: 10px;
+   
+  }
+  
+#tablero{
+width: 100%;
+  }
+  
+  
+
+#btnvisible {
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  width: 300;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 500ms;
+  opacity: 1;
+}
+
+.btnInvisible {
+  margin-top: 10px;
+  text-align: center;
+  width: 1000;
+  margin-left: auto;
+  margin-right: auto;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+  
+ 
+
+.marco-mobi{
+  display: block;
+  position: absolute;
+  top: 2vw;
+  left: 0vw;
+  width: 30vw;
+  right: 22vw;
+  text-align: center;
+}
+
+#input-letra-mobi{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 6vw;
+  visibility: hidden;
+}
+
+.mobi-btn{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  visibility: hidden;
+  width: 25vw;
+  height:8vw;
+  text-transform: uppercase;
+  color: rgb(228, 94, 94);
+  font-size: calc(0.87rem + 0.15vw);
+  font-weight: bold;
+  background-color: transparent;
+  border: 1vw solid #ff1e01;
+  border-radius: 2vw;
+}
+.mobi-btn:hover {
+  background-color: rgb(165, 1, 1);
+  color: rgb(231, 100, 100);
+  transition: 0.3s;
+}
+
+@media (max-width: 780px)
+{
+  #input-letra-mobi
+  {
+    visibility: visible;
+    width: 50%;
+  }
+  .mobi-btn
+  {
+    visibility: visible;
+  }
+}
+#cerrar{
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  margin-right: auto; 
+  transition: all 200ms;
+  font-size: calc(1.5rem + 0.5vw);
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 0, 0);
+  z-index: 15;
+}
+
+
+
 /**********************footer****************/
+
+
 
 .site-footer
 {
   height: 10vw;
-  position: fixed;display: float;
+  position: fixed;  
   bottom: 0;
   padding: 0.65vw 0 2vw;
   font-size: calc(1rem + 0.5vw);
@@ -571,16 +537,30 @@ img {
   color:#737373;
 }
 
+
 .footer-izq{
   position: fixed;
   bottom: 1vw;
   left: 0;
 }
+
+@media (max-width:767px)
+{
+  .footer-izq
+  {
+   visibility: hidden;
+  }
+}
+
+
+
 .footer-der{
   position: fixed;
   bottom: 1vw;
   right: 0;
 }
+
+
 
 .site-footer h6
 {
@@ -595,48 +575,20 @@ img {
 {
   color:#737373;
 }
+.site-footer p:hover
+{
+  color:rgb(170, 50, 50);
+  text-decoration:none;
+}
 .site-footer a:hover
 {
-  color:#3366cc;
-  text-decoration:none;
+  color:rgb(170, 50, 50);
+  text-decoration:none;  
 }
-.footer-links
-{
-  padding-left:0;
-  list-style:none
-}
-.footer-links li
-{
-  display:block
-}
-.footer-links a
-{
-  color:#737373
-}
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
-}
-.footer-links.inline li
-{
-  display:inline-block
-}
-.social-icons img{
-  width: 4vw;
-  height: 4vw;
-}
-.site-footer .social-icons
-{
-  text-align:right
-}
-.site-footer .social-icons a
-{ 
-   margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:#33353d
-}
+
+
+
+
 .text-justify
 {
   font-size: calc(1rem + 0.2vw);
@@ -648,13 +600,15 @@ img {
   margin: 0.91vw
 }
 
-@media (max-width:767px)
-{
-  .footer-izq
-  {
-   visibility: hidden;
-  }
+
+
+.social-icons img{
+  width: 4vw;
+  height: 4vw;
+  border-radius: 2.5vw;
+  transition: .2s linear;
 }
+
 .social-icons
 {
   padding-left:0;
@@ -666,59 +620,42 @@ img {
   display:inline-block;
   margin-bottom:4px
 }
-.social-icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size: calc(1rem + 0.2vw);
-}
+
 .social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size: calc(1rem + 0.2vw);
-  display:inline-block;
  
+  background-color: transparent; 
+  font-size: calc(1rem + 0.2vw);
+  display:inline-block; 
   text-align:center;
   margin-right:8px;
   border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
   transition:all .2s linear
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+
+
+.social-icons img:hover
 {
-  color:#fff;
-  background-color:#29aafe
-}
-.social-icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size: calc(1rem + 0.2vw);
-}
-.social-icons a.facebook:hover
-{
+ filter: 
+ drop-shadow(0 0 1vw rgb(247, 54, 54))
+ drop-shadow(0 0 3vw rgb(247, 64, 64))
+ drop-shadow(0 0 4vw rgb(247, 74, 74))
+ drop-shadow(0 0 6vw rgb(247, 84, 84))
+ drop-shadow(0 0 8vw rgb(247, 95, 94))
   
-  background-color:rgb(255, 9, 9, 0.3)
 }
-.social-icons a.linkedin:hover
-{
-  background-color:rgb(255, 9, 9, 0.3)
-}
-.social-icons a.github:hover
-{
-  background-color:rgb(255, 9, 9, 0.3)
-}
+
 @media (max-width:767px)
 {
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
+  .site-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
+  .footer-der{
+    position: relative;
+    width:100%;
+    text-align: center;  
+  }
+    
 }
 

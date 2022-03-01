@@ -1,171 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <img class="header" src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" width = "150" height ="100" align="left" />
-    <img class="header" src="https://www.oracle.com/a/ocom/img/rh03-lad-one-logo.png" width = "290" height ="200" align="right" />
     <title>Ahorcado</title>
     <link rel="stylesheet" href="style.css">
 
 
- 
 
-      </head>
-       <body>
-<div class="contenedor">
+  </head>
 
-    <div class="marco">
-        <p class="encabezado" style="text-align:center" class="titulo">Ahorcado</p>
-        <div class="gifsangre">
-           <img src="https://3.bp.blogspot.com/-_zxWvZJ06po/UTZaXyfHAHI/AAAAAAAAAns/3xRTkr1R29Y/s1600/bloodm10.gif" width = "293" height ="100" align="center" />
+
+    <body>
+
+      <header>
+        <div class="header-izq">
+             <img src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg" />
         </div>
-    </div>
-
-    <!--***************** INICIO SANGRADO ***********************-->
-
-      <div class="sangrado">
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-          <div>  <img src="images/gota.png" height="40px" width="40px"> </div>
-      </div>
-      
-      
-      <div class="sangrado2">      
-          <div>  <img src="images/gota.png" height="70px" width="70px" > </div>
-          <div>  <img src="images/gota.png" height="70px" width="70px"> </div>
-          <div>  <img src="images/gota.png" height="70px" width="70px"> </div>
-      </div>
-      
-
- <!--*********************** FIN SANGRADO ********************-->
-
-  <!--********************** botones *************************-->
-
-<a href="#popup1" onclick="draw()">
-  <div class="buttons" >
-    <button class="blob-btn">
-      JUGAR!!!
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-        </span>
-      </span>
-    </button>
-  </div>
-</a>
- 
-<div style="text-align:center"> <!--***CAJA DE TEXTO***-->
-  <input class="text-input" type="text" id="input-nueva-palabra"  placeholder="Escriba una nueva palabra">  
-</div>
-
-<div class="buttons2" id="add" >
-  <button class="blob-btn" onclick="escucharBoton()" >
-    AGREGAR PALABRAS NUEVAS
-    <span class="blob-btn__inner">
-      <span class="blob-btn__blobs">
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-        <span class="blob-btn__blob"></span>
-      </span>
-    </span>
-  </button>
-</div>
-
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-    </filter>
-  </defs>
-</svg>  
-
-
-
-
-</div>
-
-<!--************************POP UPDEL JUEGO***********************-->
-    <div id="popup1" class="overlay"> <!--***CONTENEDOR***-->
-      <div id="popupBody">         
-          <a id="cerrar" href="#">&times;</a>
-
-          <div class="buttons3" id="btnVisible"><!--***BOTON***-->
-            <button class="blob-btn" onclick="dibujarGuiones()" >
-              INICIAR JUEGO
-              <span class="blob-btn__inner">
-                <span class="blob-btn__blobs">
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                  <span class="blob-btn__blob"></span>
-                </span>
-              </span>
-            </button>
-          </div>
-
-          <div class="marco-mobi" style="text-align:center"> <!--***CAJA DE TEXTO***-->
-            <input maxlength="1" class="text-input-mobi" type="text" id="input-letra-mobi"  placeholder="Escriba una letra">  
-            <button class="mobi-btn" onclick="escucharTeclado()" >Arriesgar!</button>
-          </div>
-
-
-
-          <div class ="espaciotablero"><!--***CANVAS***-->
-                  <canvas class="tablero" id="tablero" width="1200" height="800">
-                  </canvas>
-          </div>
-
-      </div>
-    </div>
-   
-
     
-    <script type="text/javascript" src="palabras.js"></script>
-    <script type="text/javascript" src="arraydeletras.js"></script>
-    <script type="text/javascript" src="canvas.js"></script>
-    <script type="text/javascript" src="preguntar.js"></script>
+        <div class="header-der">
+            <img src="https://www.oracle.com/a/ocom/img/rh03-lad-one-logo.png" />
+        </div>
+      
+        
+      </header>
+
+
+
+          <!--***************** INICIO SANGRADO ***********************-->
+
+          <div class="sangrado">
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+            <div>  <img src="images/gota.png" > </div>
+        </div>
+        
+         
+            
+            
+            
+            
+        
+
+        
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+              <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+          </defs>
+        </svg> 
+        
+
+     <!--*********************** FIN SANGRADO ********************-->
+
+            
+      <div class="contenedor">
+
+          <div class="marco">
+
+              <p class="encabezado" style="text-align:center" class="titulo">Ahorcado</p>
+
+              <div class="gifsangre">
+                <img src="https://3.bp.blogspot.com/-_zxWvZJ06po/UTZaXyfHAHI/AAAAAAAAAns/3xRTkr1R29Y/s1600/bloodm10.gif" width = "293" height ="100" align="center" />
+              </div>
+
+          </div>
+
+
+
+        <!--********************** botones *************************-->
+
+          <a href="#popup" onclick="draw()">
+            <div class="buttons" >
+              <button class="blob-btn">
+                JUGAR!!!
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </a>
+          
+          <div style="text-align:center"> <!--***CAJA DE TEXTO***-->
+            <input class="text-input" type="text" id="input-nueva-palabra"  placeholder="Escriba una nueva palabra">  
+          </div>
+
+        <div class="buttons2" id="add" >
+          <button class="blob-btn" onclick="escucharBoton()" >
+            AGREGAR PALABRAS NUEVAS
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </button>
+        </div>
+ 
+
+
+
+
+      </div>
+
+      <!--************************POP UP DEL JUEGO***********************-->
+          <div id="popup" class="overlay"> <!--***CONTENEDOR***-->
+                  
+                <a id="cerrar" href="#">&times;</a>
+
+                <div class="buttons3" id="btnVisible"><!--***BOTON***-->
+                  <button class="blob-btn" onclick="dibujarGuiones()" >
+                    INICIAR JUEGO
+                    <span class="blob-btn__inner">
+                      <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="marco-mobi" style="text-align:center"> <!--***CAJA DE TEXTO***-->
+                  <input maxlength="1" class="text-input-mobi" type="text" id="input-letra-mobi"  placeholder="Escriba una letra">  
+                  <button class="mobi-btn" onclick="escucharTeclado()" >Arriesgar!</button>
+                </div>
+
+
+
+                <div class ="espaciotablero"><!--***CANVAS***-->
+                        <canvas class="tablero" id="tablero" width="1200" height="800">
+                        </canvas>
+                </div>
+
+           
+          </div>
+        
+
+          
+      <script type="text/javascript" src="palabras.js"></script>
+      <script type="text/javascript" src="arraydeletras.js"></script>
+      <script type="text/javascript" src="canvas.js"></script>
+      <script type="text/javascript" src="preguntar.js"></script>
 
 
 
 
 
-  </body>
-
- <!--**************************FOOTER********************-->
- <footer class="site-footer">
-  <div class="container">
   
 
-      <div class="footer-izq">
-        <h6>About</h6>
-        <p class="text-justify">Diseño web, fondo, iconos y ahorcado por:<i> Javier Vieira Nobre.</i> </p>
-        <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by <a href="#">mentira XD</a>.</p>
+      <!--**************************FOOTER********************-->
+    <footer class="site-footer">
+      <div class="container">
+      
+
+          <div class="footer-izq">
+            <h6>About</h6>
+            <p class="text-justify">Diseño web, fondo, iconos y ahorcado por:<i> Javier Vieira Nobre.</i> </p>
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by <a href="#">mentira XD</a>.</p>
+          </div>
+                        
+          <div class="footer-der">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/profile.php?id=594804528"><img src="images/face.png" ><i></i></a></li>
+              <li><a class="github" href="https://github.com/J-a-v-u/ahorcadoChallenge/tree/gh-pages"><img src="images/github.png" ><i></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/in/javier-alejandro-vieira-nobre-65426922b/"><img src="images/linkedin.png" ><i></i></a></li>   
+            </ul>
+          </div>
+
+      
       </div>
-                    
-      <div class="footer-der">
-        <ul class="social-icons">
-          <li><a class="facebook" href="https://www.facebook.com/profile.php?id=594804528"><img src="images/face.png" ><i></i></a></li>
-          <li><a class="github" href="https://github.com/J-a-v-u/ahorcadoChallenge/tree/gh-pages"><img src="images/github.png" ><i></i></a></li>
-          <li><a class="linkedin" href="https://www.linkedin.com/in/javier-alejandro-vieira-nobre-65426922b/"><img src="images/linkedin.png" ><i></i></a></li>   
-        </ul>
-      </div>
+    </footer>
 
-   
-  </div>
-</footer>
-
-
+  </body>
 </html>
