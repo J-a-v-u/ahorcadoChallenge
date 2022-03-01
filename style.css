@@ -65,8 +65,6 @@ img {
 } 
 
 
-
-
 .marco{
   position: relative;  
   margin: 3% 0 10% 0;
@@ -651,11 +649,11 @@ width: 100%;
 .social-icons img:hover
 {
  filter: 
- drop-shadow(0 0 1vw rgb(247, 54, 54))
- drop-shadow(0 0 3vw rgb(247, 64, 64))
- drop-shadow(0 0 4vw rgb(247, 74, 74))
- drop-shadow(0 0 6vw rgb(247, 84, 84))
- drop-shadow(0 0 8vw rgb(247, 95, 94))
+ drop-shadow(0 0 1vw rgb(181 1 1))
+ drop-shadow(0 0 1vw rgb(172 4 4))
+ drop-shadow(0 0 2vw rgb(147 1 1))
+ drop-shadow(0 0 2vw rgb(107 3 3))
+ drop-shadow(0 0 3vw rgb(62 0 0))
   
 }
 
