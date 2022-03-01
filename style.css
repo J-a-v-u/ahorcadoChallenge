@@ -52,8 +52,11 @@ header{
 
 
 .contenedor {
-  width: 100%;  
-  height: 100%;
+  position: absolute;
+  width:40%;  
+  top: 0;
+  left: 30%;
+
    
 }
 
@@ -65,7 +68,8 @@ img {
 
 
 .marco{
-  margin: -9% 30% 10% 30%;
+  position: relative;  
+  margin: 3% 0 10% 0;
   text-align: center;
   width: 40%;
   height: 8vh;
@@ -94,9 +98,12 @@ img {
 
 @media (max-width: 767px){
 
+  .contenedor{
+    left: 0;
+    width: 100%;
+  }
+
   .marco{
-      
-    margin: -36% 20% 1% 22%;
     width: 60%;
   }
 
@@ -104,6 +111,14 @@ img {
   font-size: calc( 1rem + 4vw);
   }
 
+  .buttons{
+    position: relative;
+    right: -12%;
+  }
+.buttons2{
+    position: relative;
+    right: -10%;
+  }
 }
 
 
